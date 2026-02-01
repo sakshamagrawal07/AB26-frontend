@@ -150,6 +150,44 @@ const Home = () => {
         </div>
       </section>
 
+      {/* explore section */}
+      {/* Note , replace bg with image */}
+      <section className="bg-amber-950">
+        <div className="p-20 w-full flex flex-col items-center justify-center gap-10">
+          <div className="flex items-center justify-center gap-3">
+            <div className="w-5 sm:w-15 h-0.5 rounded-full bg-white" />
+            <div className="text-white font-bold px-2">
+              On Stage and Beyond
+            </div>
+            <div className="w-5 sm:w-15 h-0.5 rounded-full bg-white" />
+          </div>
+
+          <div
+            className="w-full max-w-150 h-9 bg-contain bg-center bg-no-repeat"
+            style={{ backgroundImage: "url('/Images/Home/EXPLORE.png')" }}
+          />
+        </div>
+        <div className="w-full flex justify-center px-10 pb-20">
+          <div className="w-full max-w-150 flex flex-col gap-10">
+
+            <div className="flex w-full justify-between items-stretch">
+              <div
+                className="w-full h-40 bg-contain bg-center bg-no-repeat"
+                style={{ backgroundImage: "url('/Images/Home/pro-shows.png')" }}
+              />
+              <div
+                className="w-full h-40 bg-contain bg-center bg-no-repeat"
+                style={{ backgroundImage: "url('/Images/Home/Street-Activities.png')" }}
+              />
+              <div
+                className="w-full h-40 bg-contain bg-center bg-no-repeat"
+                style={{ backgroundImage: "url('/Images/Home/competition.png')" }}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
     </div>
   )
 }
