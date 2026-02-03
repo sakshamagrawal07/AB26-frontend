@@ -1,11 +1,18 @@
-import GuestsSpeakers from './components/GuestsSpeakers'
-import './App.css'
+import Product from "./components/Product"
 
 function App() {
+
   return (
-    <div className="App">
-      <GuestsSpeakers />
-    </div>
+    <>
+      <h1
+        className="text-3xl font-bold underline text-cyan-500"
+      >
+        Hello Vite + React!
+      </h1>
+      
+      {/* Razorpahy test: For demo of working */}
+      {/* <Product/>   */}
+    </>
   )
 }
 
