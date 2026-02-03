@@ -140,7 +140,7 @@ const Home = () => {
                     Abhivyakti, the annual cultural extravaganza of IIIT Nagpur, is a grand celebration of creativity, artistry, and cultural diversity. True to its name, meaning “expression,” it offers students a vibrant platform to showcase their talents, push boundaries, and foster a spirit of camaraderie and collaboration. As one of the most awaited campus events, it transforms the institute into a lively hub of energy and artistic brilliance. The fest features electrifying concerts, mesmerizing dances, captivating plays, and stunning art exhibitions, inspiring participants to explore their potential and celebrate creativity in unique, memorable ways. Abhivyakti, the annual cultural extravaganza of IIIT Nagpur, is a grand celebration of creativity, artistry, and cultural diversity. True to its name, meaning “expression,” it offers students a vibrant platform to showcase their talents, push boundaries, and foster a spirit of camaraderie and collaboration. As one of the most awaited campus events, it transforms the institute into a lively hub of energy and artistic brilliance. The fest features electrifying concerts, mesmerizing dances, captivating plays, and stunning art exhibitions, inspiring participants to explore their potential and celebrate creativity in unique, memorable ways.
 
                   </div>
-                  
+
                   {/* This is the button which will translate to about page */}
                   <button className="border-2 border-white text-white mt-2 bg-linear-to-b from-black/2  to-red-800 max-w-35 p-2  text-lg  rounded-lg cursor-pointer">Explore Theme</button>
                 </div>
@@ -169,8 +169,10 @@ const Home = () => {
 
       {/* Explore and Sponser Section*/}
       <section
-        className="relative w-full bg-cover bg-center bg-red-950 bg-no-repeat h-fit"
-        style={{ backgroundImage: "url('/Images/Home/red-royal-bg.png')" }}
+        className="relative w-full bg-cover  bg-center bg-red-950 bg-no-repeat h-fit"
+        style={{
+          backgroundImage: "url('/Images/Home/red-royal-bg.png')",
+        }}
       >
         <div className="absolute inset-0 bg-black/40 pointer-events-none" />
 
