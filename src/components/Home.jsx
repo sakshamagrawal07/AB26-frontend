@@ -135,7 +135,7 @@ const Home = () => {
                     className="w-full h-full object-contain"
                   />
                 </div>
-                <div className="w-full max-w-[max(700px,45vw)] text-white md:text-lg text-justify">
+                <div className="w-full max-w-[max(700px,45vw)] text-white md:text-2xl text-justify">
                   Abhivyakti, the annual cultural extravaganza of IIIT Nagpur, is a grand celebration of creativity, artistry, and cultural diversity. True to its name, meaning “expression,” it offers students a vibrant platform to showcase their talents, push boundaries, and foster a spirit of camaraderie and collaboration. As one of the most awaited campus events, it transforms the institute into a lively hub of energy and artistic brilliance. The fest features electrifying concerts, mesmerizing dances, captivating plays, and stunning art exhibitions, inspiring participants to explore their potential and celebrate creativity in unique, memorable ways.
                 </div>
               </div>
@@ -143,8 +143,8 @@ const Home = () => {
           </div>
           {/* Video section */}
           <div className="px-8 py-10 grid place-items-center">
-            <div className="w-full max-w-200 border border-white/10 p-6 sm:px-14 sm:py-10 rounded-4xl">
-              <div className="w-full h-100 overflow-hidden rounded-3xl">
+            <div className="w-full max-w-300 border border-white/10 p-6 sm:px-14 sm:py-10 rounded-4xl">
+              <div className="w-full h-150 overflow-hidden rounded-3xl">
                 <iframe
                   width="100%"
                   height="100%"
@@ -206,7 +206,7 @@ const Home = () => {
         </div>
 
 
-        {/* GUEST SECTION IN BETWEEN */}
+        {/*=============== GUEST SECTION IN BETWEEN ================== */}
 
         {/* Sponsors Section */}
         <div className="relative mt-32">
