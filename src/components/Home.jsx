@@ -1,3 +1,4 @@
+import SponsorCard from "./ui/home-page/Sponser-card/sponserCart";
 const Home = () => {
 
   const navLinks = [
@@ -8,6 +9,30 @@ const Home = () => {
     { content: "Teams", to: "/" },
     { content: "Contact Us", to: '/' }
   ]
+
+
+  const topSponsors = [
+    { logo: "/Images/Sponsors/s1.png", alt: "Sponsor 1" },
+    { logo: "/Images/Sponsors/s2.png", alt: "Sponsor 2" },
+    { logo: "/Images/Sponsors/s3.png", alt: "Sponsor 3" },
+    { logo: "/Images/Sponsors/s3.png", alt: "Sponsor 3" },
+    { logo: "/Images/Sponsors/s3.png", alt: "Sponsor 3" },
+    { logo: "/Images/Sponsors/s3.png", alt: "Sponsor 3" },
+    { logo: "/Images/Sponsors/s3.png", alt: "Sponsor 3" },
+    { logo: "/Images/Sponsors/s3.png", alt: "Sponsor 3" },
+  ];
+
+  const bottomSponsors = [
+    { logo: "/Images/Sponsors/s4.png", alt: "Sponsor 4" },
+    { logo: "/Images/Sponsors/s4.png", alt: "Sponsor 4" },
+    { logo: "/Images/Sponsors/s4.png", alt: "Sponsor 4" },
+    { logo: "/Images/Sponsors/s4.png", alt: "Sponsor 4" },
+    { logo: "/Images/Sponsors/s5.png", alt: "Sponsor 5" },
+    { logo: "/Images/Sponsors/s6.png", alt: "Sponsor 6" },
+    { logo: "/Images/Sponsors/s6.png", alt: "Sponsor 6" },
+    { logo: "/Images/Sponsors/s6.png", alt: "Sponsor 6" },
+  ];
+
 
   return (
     <div className="w-full h-full">
@@ -197,41 +222,40 @@ const Home = () => {
 
         {/* GUEST SECTION IN BETWEEN */}
 
-        {/* Sponsers */}
-        <div className="absolute inset-0 bg-black/40" />
-        <div className="relative mx-auto max-w-[1400px] px-6 sm:px-10 lg:px-20">
-
-          <div className="mb-14">
-            <h2 className="text-[#D4AF37] text-3xl tracking-widest font-semibold">
-              SPONSORS
-            </h2>
+        {/* Sponsors Section */}
+        <div className="relative mt-32">
+          <div className="p-2 flex items-center justify-start">
+            <div
+              className="w-full max-w-160 h-10 mx-auto mb-12 bg-contain  bg-no-repeat"
+              style={{ backgroundImage: "url('/Images/Home/SPONSERS.png')" }}
+            />
           </div>
 
-          {/* Left -> Right */}
-          <div className="overflow-hidden mb-10">
-            <div
-              className="flex gap-6 w-max animate-[marquee-right_25s_linear_infinite]"
-            >
-              {[...Array(10), ...Array(10)].map((_, i) => (
-                <div
-                  key={`top-${i}`}
-                  className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20"
-                />
-              ))}
+          <div className="w-full flex flex-col justify-center items-center gap-12 ">
+
+            {/* Left -> Right */}
+            <div className="w-full overflow-hidden flex justify-center">
+              <div className="relative flex justify-center w-full">
+                <div className="flex gap-15 w-max animate-[marquee-right_30s_linear_infinite]">
+                  {[...topSponsors, ...topSponsors].map((s, i) => (
+                    <SponsorCard key={`top-${i}`} logo={s.logo} alt={s.alt} />
+                  ))}
+                </div>
+              </div>
             </div>
-          </div>
 
-          {/* Right → Left */}
-          <div className="overflow-hidden">
-            <div
-              className="flex gap-6 w-max animate-[marquee-left_25s_linear_infinite]"
-            >
-              {[...Array(10), ...Array(10)].map((_, i) => (
-                <div
-                  key={`bottom-${i}`}
-                  className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20"
-                />
-              ))}
+
+            {/* Right -> Left */}
+            <div className="w-full overflow-hidden   ">
+              <div className="flex gap-15 w-max animate-[marquee-left_30s_linear_infinite]">
+                {[...bottomSponsors, ...bottomSponsors].map((s, i) => (
+                  <SponsorCard
+                    key={`bottom-${i}`}
+                    logo={s.logo}
+                    alt={s.alt}
+                  />
+                ))}
+              </div>
             </div>
           </div>
         </div>
