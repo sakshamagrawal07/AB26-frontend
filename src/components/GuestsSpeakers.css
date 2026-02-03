@@ -1,0 +1,513 @@
+/* ========================================
+   FONT IMPORTS
+   ======================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap');
+
+/* If Besta Baru is a custom font, uncomment and update the path */
+/*
+@font-face {
+  font-family: 'Besta Baru';
+  src: url('/fonts/BestaBaru-Regular.woff2') format('woff2'),
+       url('/fonts/BestaBaru-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Besta Baru';
+  src: url('/fonts/BestaBaru-Bold.woff2') format('woff2'),
+       url('/fonts/BestaBaru-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+*/
+
+/* ========================================
+   GUESTS & SPEAKERS SECTION
+   ======================================== */
+
+.guests-speakers-section {
+  position: relative;
+  min-height: 100vh;
+  padding: 80px 0;
+  overflow: hidden;
+  background-color: #0a0a0a;
+}
+
+/* Background with texture */
+.background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  background-image: url('/images/background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+/* Fallback gradient if image doesn't load */
+.guests-speakers-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #1a0a0a 0%, #2d1810 100%);
+  opacity: 0.9;
+  z-index: -1;
+}
+
+/* Main container */
+.section-container {
+  position: relative;
+  z-index: 1;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 60px;
+}
+
+/* ========================================
+   TITLE SECTION
+   ======================================== */
+
+.section-title {
+  text-align: left;
+  margin-bottom: 100px;
+  padding-left: 0;
+}
+
+/* Subtitle with line */
+.subtitle-line {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.subtitle-line .line {
+  width: 60px;
+  height: 2px;
+  background-color: #ffffff;
+}
+
+.subtitle-text {
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+  font-family: 'Arial', sans-serif;
+  text-transform: none;
+}
+
+/* Main title */
+.title-white,
+.title-gold {
+  margin: 0;
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.05em;
+  font-family: 'Playfair Display', 'Georgia', serif;
+  text-transform: uppercase;
+}
+
+.title-white {
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 0;
+}
+
+.title-gold {
+  color: #d4a574;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* ========================================
+   CAROUSEL CONTAINER
+   ======================================== */
+
+.carousel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 20px 0;
+}
+
+/* ========================================
+   NAVIGATION ARROWS
+   ======================================== */
+
+.nav-arrow {
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  z-index: 10;
+  backdrop-filter: blur(3px);
+}
+
+.nav-arrow:hover {
+  background: rgba(0, 0, 0, 0.75);
+  transform: scale(1.05);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.nav-arrow:active {
+  transform: scale(0.95);
+}
+
+.nav-arrow svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* ========================================
+   CARDS WRAPPER & TRACK
+   ======================================== */
+
+.cards-wrapper {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+  padding: 40px 0;
+  margin: -20px 0;
+}
+
+.cards-track {
+  display: flex;
+  gap: 40px;
+  will-change: transform;
+}
+
+/* JS sets width + flexBasis inline; this just prevents shrink */
+.card-item {
+  flex: 0 0 auto;
+  min-width: 0;
+}
+
+/* ========================================
+   PLAYING CARD
+   ======================================== */
+
+.playing-card {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 2.5/3.8;
+  perspective: 1000px;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+
+.playing-card:hover {
+  transform: translateY(-15px) scale(1.02);
+}
+
+/* Card Inner Container */
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #f5e6d3 0%, #e8d4b8 100%);
+  border-radius: 12px;
+  padding: 0;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transition: all 0.4s ease;
+}
+
+.playing-card:hover .card-inner {
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+}
+
+/* ========================================
+   CARD SYMBOLS (M ♦)
+   ======================================== */
+
+.card-symbol {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  z-index: 10;
+}
+
+.card-symbol.top {
+  top: 16px;
+  left: 18px;
+}
+
+.card-symbol.bottom {
+  bottom: 16px;
+  right: 18px;
+  transform: rotate(180deg);
+}
+
+.card-symbol .letter {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #c41e3a;
+  font-family: 'Playfair Display', serif;
+  line-height: 0.9;
+}
+
+.card-symbol .diamond {
+  font-size: 1.5rem;
+  color: #c41e3a;
+  line-height: 1;
+  margin-top: -2px;
+}
+
+/* ========================================
+   DESIGNATION & GUEST NAME TEXT
+   ======================================== */
+
+.designation-text {
+  position: absolute;
+  top: 52px;
+  right: 28px;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  color: #1a1a1a;
+  text-align: right;
+  z-index: 10;
+  font-family: 'Besta Baru', 'Arial', 'Helvetica', sans-serif;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.guest-name-text {
+  position: absolute;
+  bottom: 52px;
+  left: 28px;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: #1a1a1a;
+  text-align: left;
+  z-index: 10;
+  font-family: 'Besta Baru', 'Arial', 'Helvetica', sans-serif;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* ========================================
+   DIAMOND / ARGYLE PATTERN BACKGROUND
+   ======================================== */
+
+.diamond-pattern {
+  position: absolute;
+  top: 75px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 45px);
+  height: calc(100% - 150px);
+  background-color: #c9a882;
+  background-image:
+    linear-gradient(45deg, #4a3a2a 25%, transparent 25%),
+    linear-gradient(-45deg, #4a3a2a 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #4a3a2a 75%),
+    linear-gradient(-45deg, transparent 75%, #4a3a2a 75%),
+    linear-gradient(45deg, #8b2252 25%, transparent 25%),
+    linear-gradient(-45deg, #8b2252 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #8b2252 75%),
+    linear-gradient(-45deg, transparent 75%, #8b2252 75%);
+  background-size: 40px 40px;
+  background-position:
+    0 0, 0 0, 0 0, 0 0,
+    20px 20px, 20px 20px, 20px 20px, 20px 20px;
+  border-radius: 6px;
+  z-index: 1;
+}
+
+/* ========================================
+   SPEAKER PHOTO
+   ======================================== */
+
+.speaker-photo {
+  position: absolute;
+  top: 75px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 45px);
+  height: calc(100% - 150px);
+  border-radius: 6px;
+  overflow: hidden;
+  z-index: 5;
+  background-color: transparent;
+}
+
+.speaker-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.playing-card:hover .speaker-photo img {
+  transform: scale(1.05);
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+@media (max-width: 1200px) {
+  .section-container {
+    padding: 0 40px;
+  }
+
+  .title-white,
+  .title-gold {
+    font-size: 4.5rem;
+  }
+
+  .section-title {
+    margin-bottom: 80px;
+  }
+
+  .carousel-container {
+    gap: 25px;
+  }
+
+  .cards-track {
+    gap: 40px;
+  }
+
+  .card-item {
+    flex: 0 0 auto;
+  }
+}
+
+@media (max-width: 1024px) {
+  .section-container {
+    padding: 0 30px;
+  }
+
+  .title-white,
+  .title-gold {
+    font-size: 4rem;
+  }
+
+  .section-title {
+    margin-bottom: 70px;
+  }
+
+  .carousel-container {
+    gap: 20px;
+  }
+
+  .nav-arrow {
+    width: 48px;
+    height: 48px;
+  }
+
+  .nav-arrow svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .card-item {
+    flex: 0 0 auto;
+  }
+
+  .cards-track {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .guests-speakers-section {
+    padding: 60px 0;
+  }
+
+  .section-container {
+    padding: 0 20px;
+  }
+
+  .section-title {
+    margin-bottom: 50px;
+  }
+
+  .title-white,
+  .title-gold {
+    font-size: 3rem;
+  }
+
+  .carousel-container {
+    gap: 15px;
+  }
+
+  .nav-arrow {
+    width: 45px;
+    height: 45px;
+  }
+
+  .nav-arrow svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .card-item {
+    flex: 0 0 auto;
+  }
+
+  .cards-track {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-container {
+    padding: 0 15px;
+  }
+
+  .title-white,
+  .title-gold {
+    font-size: 2.5rem;
+  }
+
+  .section-title {
+    margin-bottom: 40px;
+  }
+
+  .nav-arrow {
+    width: 40px;
+    height: 40px;
+  }
+
+  .nav-arrow svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .card-symbol .letter {
+    font-size: 1.6rem;
+  }
+
+  .card-symbol .diamond {
+    font-size: 1.3rem;
+  }
+
+  .designation-text,
+  .guest-name-text {
+    font-size: 0.6rem;
+  }
+}
