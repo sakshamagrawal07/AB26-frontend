@@ -1,4 +1,5 @@
 import SponsorCard from "./ui/home-page/Sponser-card/sponserCart";
+import { Link } from "react-router-dom";
 const Home = () => {
 
   const navLinks = [
@@ -38,6 +39,34 @@ const Home = () => {
     { logo: "/Images/Sponsors/s6.png", alt: "Sponsor 6" },
     { logo: "/Images/Sponsors/s6.png", alt: "Sponsor 6" },
   ];
+
+  const EventLinks = [
+    {
+      text: 'Dance',
+      link: '/'
+    },
+
+    {
+      text: 'Dramatic',
+      link: '/'
+    },
+    {
+      text: 'Music',
+      link: '/'
+    },
+    {
+      text: 'Speaking Arts',
+      link: '/'
+    },
+    {
+      text: 'Fine Arts',
+      link: '/'
+    },
+    {
+      text: 'Digital Arts',
+      link: '/'
+    },
+  ]
 
 
   return (
@@ -210,6 +239,13 @@ const Home = () => {
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* Marquee for events */}
+          <div className="w-full mt-2 bg-amber-300">
+            <div className="">
+
+            </div>
           </div>
         </div>
 
