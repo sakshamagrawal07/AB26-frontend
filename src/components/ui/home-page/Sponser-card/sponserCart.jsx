@@ -1,4 +1,4 @@
-const SponsorCard = ({ logo, alt }) => {
+export const SponsorCard = ({ logo, alt }) => {
     return (
         <div
             className="
@@ -19,5 +19,3 @@ const SponsorCard = ({ logo, alt }) => {
         </div>
     );
 };
-
-export default SponsorCard;
