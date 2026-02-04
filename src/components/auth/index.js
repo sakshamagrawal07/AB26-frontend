@@ -4,11 +4,7 @@ export { default as SignIn } from "./SignIn.jsx";
 export { default as SignUp } from "./SignUp.jsx";
 
 // Authentication hooks
-export {
-  AuthProvider,
-  useAuth,
-  useAuthForm,
-} from "../../hooks/auth/useAuth.js";
+export { default as useAuth } from "../../hooks/auth/useAuth.js";
 
 // Authentication utilities
 // export * from "./utils/validation";

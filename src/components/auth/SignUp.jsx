@@ -136,14 +136,29 @@ const SignUp = ({ onSwitchToSignIn, currentStep = 1 }) => {
                 placeholder="Last Name (Optional)"
                 className="p-3 sm:p-4 border-2 border-gray-600 text-sm sm:text-base transition-all duration-200 focus:outline-none focus:border-[#3C0919] focus:ring-2 focus:ring-[#3c091951] placeholder-gray-400"
               />
-              <input
-                type="date"
-                name="dateOfBirth"
-                value={formData.dateOfBirth}
-                onChange={handleChange}
-                placeholder="MM/DD/YY"
-                className="p-3 sm:p-4 border-2 border-gray-600 text-sm sm:text-base transition-all duration-200 focus:outline-none focus:border-[#3C0919] focus:ring-2 focus:ring-[#3c091951] placeholder-gray-400"
-              />
+              <div className="relative w-full">
+                <input
+                  type="date"
+                  name="dateOfBirth"
+                  required
+                  value={formData.dateOfBirth}
+                  onChange={handleChange}
+                  onClick={(e) => e.target.showPicker?.()}
+                  className={`w-full p-3 sm:p-4 border-2 border-gray-600 rounded-none bg-transparent
+                  text-sm sm:text-base transition-all duration-200 cursor-pointer
+                  focus:outline-none focus:border-[#3C0919] focus:ring-2 focus:ring-[#3c091951]
+                  z-10 relative
+                  ${!formData.dateOfBirth ? "text-transparent" : "text-gray-900"} 
+                `}
+                />
+
+                {/* fake placeholder */}
+                {!formData.dateOfBirth && (
+                  <span className="absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 text-gray-400 text-sm sm:text-base pointer-events-none z-0">
+                    Date of Birth
+                  </span>
+                )}
+              </div>
             </div>
           </>
         );

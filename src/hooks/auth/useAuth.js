@@ -45,9 +45,16 @@ const useAuth = () => {
   const switchAuthMode = useCallback(
     (newMode) => {
       // switching to newMode step 1
-      openAuth(newMode, 1);
+      setSearchParams(
+        (prev) => {
+          prev.set("auth", newMode);
+          prev.set("step", "1");
+          return prev;
+        },
+        { replace: true },
+      );
     },
-    [openAuth],
+    [setSearchParams],
   );
 
   return {

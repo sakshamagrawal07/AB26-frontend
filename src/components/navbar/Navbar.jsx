@@ -32,6 +32,7 @@ const Navbar = ({ isLoggedIn = false }) => {
     { path: "/contact", label: "Contact Us" },
   ];
 
+  // highlight the active path
   const isActive = (path) => location.pathname === path;
 
   const toggleMobileMenu = () => {
@@ -228,7 +229,6 @@ const Navbar = ({ isLoggedIn = false }) => {
 
           {/* Mobile Layout */}
           <div className="md:hidden flex justify-between items-center h-16">
-            {/* Hamburger Menu */}
             <button
               onClick={toggleMobileMenu}
               className="text-white p-2 cursor-pointer focus:outline-none z-50"
@@ -246,7 +246,6 @@ const Navbar = ({ isLoggedIn = false }) => {
               </div>
             </button>
 
-            {/* Logo - Center */}
             <div className="absolute left-1/2 transform -translate-x-1/2">
               <div className="w-12 h-12 rounded-full flex items-center justify-center">
                 <img
@@ -256,7 +255,6 @@ const Navbar = ({ isLoggedIn = false }) => {
               </div>
             </div>
 
-            {/* Login Button / Profile */}
             {isLoggedIn ? (
               <div className="w-8 h-8 rounded-full bg-linear-to-br from-yellow-400 to-yellow-600 flex items-center justify-center text-white font-semibold cursor-pointer">
                 A
@@ -273,7 +271,7 @@ const Navbar = ({ isLoggedIn = false }) => {
         </div>
       </nav>
 
-      {/* Mobile Menu Overlay */}
+      {/* Mobile Overlay */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
@@ -283,12 +281,10 @@ const Navbar = ({ isLoggedIn = false }) => {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.15 }}
           >
-            {/* Black backdrop */}
             <div
               className="absolute inset-0 bg-black/40 backdrop-blur-sm"
               onClick={closeMobileMenu}
             ></div>
-            {/* Menu Content */}
             <motion.div
               className="relative z-60 h-full flex flex-col justify-center items-center space-y-8 text-white"
               initial={{ opacity: 0, y: -10 }}
@@ -296,7 +292,6 @@ const Navbar = ({ isLoggedIn = false }) => {
               exit={{ opacity: 0, y: 10 }}
               transition={{ duration: 0.3 }}
             >
-              {/* Close Button - Top Right */}
               <button
                 onClick={closeMobileMenu}
                 className="absolute cursor-pointer top-6 right-6 text-white hover:text-gray-300 transition-colors p-2 z-70"
@@ -317,7 +312,7 @@ const Navbar = ({ isLoggedIn = false }) => {
                 </svg>
               </button>
 
-              {/* Navigation Links */}
+              {/* Navigation */}
               {navLinks.map((link, index) => (
                 <motion.div
                   key={link.path}
@@ -344,7 +339,7 @@ const Navbar = ({ isLoggedIn = false }) => {
                 </motion.div>
               ))}
 
-              {/* Mobile Auth Buttons / Profile */}
+              {/* Auth Buttons / Profile */}
               {isLoggedIn ? (
                 <div className="flex flex-col items-center gap-4 mt-8 border rounded-md p-2">
                   <p className="text-white text-xl font-medium">My Profile</p>

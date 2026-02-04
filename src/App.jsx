@@ -11,7 +11,7 @@ function App() {
     // for toast
     <ToastProvider>
       <div className="min-h-screen">
-        {/* testing login state */}
+        {/* testing login state - TEMPORARY */}
         <button
           onClick={() => setIsLoggedIn(!isLoggedIn)}
           className="fixed bottom-6 right-6 z-100 px-4 py-2 bg-blue-600 text-white rounded-lg shadow-lg hover:bg-blue-700 transition-colors font-medium"
@@ -27,12 +27,16 @@ function App() {
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
 
-        {/* for auth modals, keep it here */}
+        {/* for auth modals, don't move this */}
         <ModalAuthLayout />
       </div>
     </ToastProvider>
   );
 }
+
+// =====================
+// Helpers
+// =====================
 
 // Home Page
 const HomePage = () => (
