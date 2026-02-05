@@ -1,8 +1,13 @@
+
+import Home from "./components/Home"
 import Product from "./components/Product"
 import AboutTheme from "./components/AboutTheme"
 
-function App() {
+// import GuestsSpeakers from './components/GuestsSpeakers'
+// import './App.css'
 
+
+function App() {
   return (
     <>
       {/* <h1
@@ -10,11 +15,15 @@ function App() {
       >
         Hello Vite + React!
       </h1> */}
+      <Home />
       <AboutTheme />
-
+      
       {/* Razorpahy test: For demo of working */}
       {/* <Product/>   */}
     </>
+//     <div className="App">
+//       <GuestsSpeakers />
+//     </div>
   )
 }
 
