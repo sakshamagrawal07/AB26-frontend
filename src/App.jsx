@@ -8,11 +8,11 @@ import NotFound from "./components/not-found/NotFound";
 import { ToastProvider } from "./contexts/ToastContext";
 import Sponsors from "./pages/Sponsors";
 import Teams from "./pages/Teams";
+import Explore from "./pages/Explore";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
-function App() {
   return (
     // for toast
     <ToastProvider>
@@ -34,7 +34,9 @@ function App() {
           {/* Sponsors route */}
           <Route path="/sponsors" element={<Sponsors />} />
           {/* Teams route */}
-          <Route path="/teams" element={<Teams />} />
+          <Route path="/team" element={<Teams />} />
+          {/* Explore route */}
+          <Route path="/explore" element={<Explore />} />
         </Routes>
 
         <Footer />

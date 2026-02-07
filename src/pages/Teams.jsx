@@ -9,7 +9,6 @@ const Teams = () => {
     <main>
       <TeamHero/>
       <TeamSection />
-      <Footer />
     </main>
   );
 };

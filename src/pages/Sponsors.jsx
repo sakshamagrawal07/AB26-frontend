@@ -25,7 +25,6 @@ const Sponsors = () => {
   <SponsorsTierSection title="PLATINUM SPONSORS" sponsors={tierTwo} />
   <SponsorsTierSection title="GOLD SPONSORS" sponsors={tierThree} /> */}
       <ComingSoon />
-      <Footer />
     </main>
 
   );
