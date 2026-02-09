@@ -13,6 +13,7 @@ export const exploreData = {
             time: "7:30 PM",
             image: "/images/explore/shawn.jpg",
             layout: "image-left",
+            buyLink: "/passes/proshow-1",
         },
         {
             id: "proshow-2",
@@ -25,6 +26,7 @@ export const exploreData = {
             time: "8:00 PM",
             image: "/images/explore/shawn.jpg",
             layout: "image-right",
+            buyLink: "/passes/proshow-2",
         },
     ],
 
@@ -42,6 +44,7 @@ export const exploreData = {
             time: "All Day",
             image: "/images/explore/shawn.jpg",
             layout: "image-left",
+            buyLink: "/passes/street-1",
         },
         {
             id: "street-2",
@@ -54,6 +57,7 @@ export const exploreData = {
             time: "All Day",
             image: "/images/explore/shawn.jpg",
             layout: "image-right",
+            buyLink: "/passes/street-2",
         },
         {
             id: "street-3",
@@ -66,6 +70,7 @@ export const exploreData = {
             time: "All Day",
             image: "/images/explore/shawn.jpg",
             layout: "image-left",
+            buyLink: "/passes/street-3",
         },
     ],
 };

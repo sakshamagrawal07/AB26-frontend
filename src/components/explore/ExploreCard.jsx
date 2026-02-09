@@ -1,4 +1,5 @@
 import styles from "./explore.module.css";
+import { Link } from "react-router-dom";
 
 const ExploreCard = ({
     genre,
@@ -7,6 +8,7 @@ const ExploreCard = ({
     date,
     venue,
     time,
+    buyLink,
 }) => {
     return (
         <article className={styles.card}>
@@ -22,7 +24,7 @@ const ExploreCard = ({
                 <span className={styles.metaItem}>{time}</span>
             </div>
 
-            <button className={styles.button}>Buy Passes</button>
+            <Link to={buyLink} className={styles.button}>Buy Passes</Link>
         </article>
     );
 };

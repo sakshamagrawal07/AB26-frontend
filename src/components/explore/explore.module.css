@@ -261,6 +261,9 @@
     width: 153px;
     height: 40px;
     border-radius: 7px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 
     transition:
         background 0.3s ease,
