@@ -1,48 +1,66 @@
 /* =====================
-   TABS
+   EXPLORE TABS
    ===================== */
 
 .tabsWrapper {
     display: flex;
-    justify-content: center;
-    gap: 48px;
-    margin: 56px 0 72px;
+    justify-content: space-between;
+    /* 👈 key change */
+    align-items: flex-end;
+
+    max-width: 1100px;
+    /* controls how far left/right they go */
+    margin: 56px auto 0;
+    /* centers the whole group */
+
+    padding: 0 24px;
+    /* breathing room on small screens */
 }
 
+
+/* Base tab (inactive) */
 .tab {
+    width: 280px;
+    height: 66px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     font-family: "Gabarito", system-ui, sans-serif;
-    font-size: 0.95rem;
-    font-weight: 500;
-    color: #8a8a8a;
-    background: none;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0;
+    font-weight: 400;
+
+    color: #9a9a9a;
+    background: #000;
+
     border: none;
     cursor: pointer;
-    position: relative;
-    padding-bottom: 6px;
 
-    transition: color 0.3s ease;
+    border-top-left-radius: 22px;
+    border-top-right-radius: 22px;
+
+    transition:
+        background 0.25s ease,
+        color 0.25s ease,
+        font-weight 0.25s ease,
+        transform 0.25s ease;
 }
 
-.tab::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0;
-    height: 2px;
-    background: var(--red-500, #ff2c55);
-
-    transition: width 0.3s ease;
-}
-
-.tab:hover::after,
-.activeTab::after {
-    width: 100%;
-}
-
+/* Active tab */
 .activeTab {
+    background: var(--red-800, rgba(60, 9, 25, 1));
+    color: #ffffff;
+    font-weight: 700;
+}
+
+/* Optional: subtle hover for inactive tabs only */
+.tab:not(.activeTab):hover {
     color: #ffffff;
 }
+
 
 /* =====================
    SECTION / EMPTY STATE
@@ -50,10 +68,10 @@
 
 .section {
     background: rgba(14, 14, 14, 1);
-    padding: 80px 0 120px;
+    padding: 120px 0 120px;
     display: flex;
     flex-direction: column;
-    gap: 120px;
+    gap: 100px;
 }
 
 .sectionInner {
@@ -62,7 +80,7 @@
     padding: 0 32px;
     display: flex;
     flex-direction: column;
-    gap: 120px;
+    gap: 70px;
 }
 
 .emptyState {
@@ -294,8 +312,32 @@
 
 @media (max-width: 768px) {
     .tabsWrapper {
-        gap: 24px;
-        margin: 40px 0 56px;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        max-width: 100%;
+        margin: 32px auto 48px;
+        padding: 0 12px;
+        /* tighter edges */
+        gap: 12px;
+        /* controlled breathing */
+    }
+
+    .tab {
+        width: 120px;
+        /* 👈 major downscale */
+        height: 44px;
+
+        font-size: 14px;
+        /* 👈 reduced typography */
+        font-weight: 400;
+
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+    }
+
+    .activeTab {
+        font-weight: 600;
     }
 
     .row {
