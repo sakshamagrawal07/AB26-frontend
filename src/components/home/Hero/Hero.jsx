@@ -66,7 +66,8 @@ const Hero = () => {
               hidden: {},
               show: { transition: { staggerChildren: 1 } },
             }}
-            className="flex gap-2.5 text-[#D4AF37] text-xl md:text-3xl translate-y-4"
+            className="flex gap-2.5 text-[#D4AF37] text-xl md:text-4xl translate-y-4 tracking-widest"
+            style={{ fontFamily: "Besta Baru" }}
           >
             {["THE", "ENCHANTED", "CIRCUS"].map((word, i) => (
               <motion.span
@@ -111,7 +112,8 @@ const Hero = () => {
               duration: 1.5,
               delay: 3,
             }}
-            className="text-[#D4AF37] text-4xl md:text-6xl"
+            className="text-[#D4AF37] text-4xl md:text-6xl tracking-widest"
+            style={{ fontFamily: "Besta Baru" }}
           >
             2026
           </motion.div>
