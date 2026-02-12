@@ -12,6 +12,7 @@ const Navbar = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
+  // for page title
   const titles = {
     "/": "Abhivyakti 26",
     "/about": "About Us | Abhivyakti 26",
