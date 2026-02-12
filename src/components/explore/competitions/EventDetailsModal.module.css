@@ -245,12 +245,26 @@
   font-weight: 500;
 }
 
+.tabContent {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+}
+
 .tabContent::-webkit-scrollbar {
   width: 6px;
 }
+
+.tabContent::-webkit-scrollbar-track {
+  background: transparent;
+}
+
 .tabContent::-webkit-scrollbar-thumb {
   background: rgba(255, 255, 255, 0.2);
   border-radius: 3px;
+}
+
+.tabContent::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.4);
 }
 
 /* Content Typography */
@@ -421,13 +435,6 @@
 .contactIcon {
   font-size: 1.1rem;
   color: #ff4757;
-}
-
-.tabContent::-webkit-scrollbar {
-  display: none;
-}
-.tabContent {
-  scrollbar-width: none;
 }
 
 /* Bottom Actions */
