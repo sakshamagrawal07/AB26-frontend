@@ -1,22 +1,21 @@
 import { motion } from "framer-motion";
 import "./HeroSection.css";
-import stageBg from "@/assets/background/background-curtains.webp";
-import abhivyaktiText from "@/assets/branding/abhivyakti text-yellow.webp";
 
 const HeroSection = () => {
   return (
     <section className="sponsor-hero">
-
       {/* Background */}
       <div
         className="hero-bg"
-        style={{ backgroundImage: `url(${stageBg})` }}
+        style={{
+          backgroundImage: `url('/assets/background/background-curtains.webp')`,
+        }}
       />
 
       {/* ABHIVYAKTI branding */}
       <div className="hero-branding">
         <img
-          src={abhivyaktiText}
+          src={"/assets/branding/abhivyakti text-yellow.webp"}
           alt="Abhivyakti"
           className="abhivyakti-text"
         />
@@ -49,7 +48,6 @@ const HeroSection = () => {
 
       {/* Fade to content */}
       <div className="hero-to-content-gradient" />
-
     </section>
   );
 };

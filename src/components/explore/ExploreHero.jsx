@@ -1,16 +1,14 @@
-import { motion, animate } from "framer-motion";
+import { animate, motion } from "framer-motion";
 import { useEffect, useRef } from "react";
 import "./ExploreHero.css";
 
-import bgExplore from "@/assets/background/explore_bg.webp";
-
-import img1 from "@/assets/background/card_1.webp";
-import img2 from "@/assets/background/card_2.webp";
-import img3 from "@/assets/background/card_3.webp";
-import img4 from "@/assets/background/card_4.webp";
-import img5 from "@/assets/background/card_5.webp";
-
-const cards = [img1, img2, img3, img4, img5];
+const cards = [
+  "/assets/background/card_1.webp",
+  "/assets/background/card_2.webp",
+  "/assets/background/card_3.webp",
+  "/assets/background/card_4.webp",
+  "/assets/background/card_5.webp",
+];
 
 /* card entry */
 const cardsEnter = {
@@ -64,7 +62,7 @@ export default function ExploreHero() {
       {/* background */}
       <div
         className="explore-bg"
-        style={{ backgroundImage: `url(${bgExplore})` }}
+        style={{ backgroundImage: `url('/assets/background/explore_bg.webp')` }}
       />
 
       {/* stage */}
@@ -77,10 +75,7 @@ export default function ExploreHero() {
           animate="visible"
         >
           {visibleCards.map((img, i) => (
-            <div
-              className={`card-wrap pos-${isMobile ? i + 1 : i}`}
-              key={i}
-            >
+            <div className={`card-wrap pos-${isMobile ? i + 1 : i}`} key={i}>
               <motion.img
                 src={img}
                 alt=""

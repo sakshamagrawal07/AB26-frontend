@@ -1,22 +1,21 @@
 import { motion } from "framer-motion";
 import "./passesStayHero.css";
-import stageBg from "@/assets/background/background-curtains.webp";
-import abhivyaktiText from "@/assets/branding/abhivyakti text-yellow.webp";
 
 const PassesStayHero = () => {
   return (
     <section className="hero">
-
       {/* Background */}
       <div
         className="hero-bg"
-        style={{ backgroundImage: `url(${stageBg})` }}
+        style={{
+          backgroundImage: `url('/assets/background/background-curtains.webp')`,
+        }}
       />
 
       {/* ABHIVYAKTI branding */}
       <div className="hero-branding">
         <img
-          src={abhivyaktiText}
+          src={"/assets/branding/abhivyakti text-yellow.webp"}
           alt="Abhivyakti"
           className="abhivyakti-text"
         />
@@ -56,9 +55,10 @@ const PassesStayHero = () => {
               const progress = Math.min(timeElapsed / duration, 1);
 
               // Easing function (easeInOutQuad)
-              const ease = progress < 0.5
-                ? 2 * progress * progress
-                : 1 - Math.pow(-2 * progress + 2, 2) / 2;
+              const ease =
+                progress < 0.5
+                  ? 2 * progress * progress
+                  : 1 - Math.pow(-2 * progress + 2, 2) / 2;
 
               window.scrollTo(0, startPosition + distance * ease);
 
@@ -70,8 +70,20 @@ const PassesStayHero = () => {
             requestAnimationFrame(animation);
           }}
         >
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M6 9L12 15L18 9" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M6 9L12 15L18 9"
+              stroke="white"
+              strokeWidth="3"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
           </svg>
         </button>
       </div>
@@ -86,7 +98,6 @@ const PassesStayHero = () => {
 
       {/* Fade to content */}
       <div className="hero-to-content-gradient" />
-
     </section>
   );
 };

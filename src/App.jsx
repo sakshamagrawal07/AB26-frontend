@@ -1,11 +1,10 @@
 import Lenis from "lenis";
 import { useEffect } from "react";
 import { Route, Routes, useLocation } from "react-router-dom";
-import ModalAuthLayout from "./components/auth/ModalAuthLayout";
+import { AuthModalProvider } from "./components/auth/ModalAuthLayout";
 import Footer from "./components/common/Footer/Footer";
 import Navbar from "./components/common/Navbar/Navbar";
 import NotFound from "./components/not-found/NotFound";
-import { AuthProvider } from "./contexts/AuthContext";
 import { ToastProvider } from "./contexts/ToastContext";
 import About from "./pages/About";
 import Developers from "./pages/Developers";
@@ -53,8 +52,8 @@ function App() {
   return (
     // for toast
     <ToastProvider>
-      {/* for auth */}
-      <AuthProvider>
+      {/* Auth modal provider */}
+      <AuthModalProvider>
         <ScrollToTop />
         <div className="min-h-screen">
           {/* obv the navbar */}
@@ -72,10 +71,8 @@ function App() {
           </Routes>
 
           <Footer />
-          {/* for auth modals, don't move this */}
-          <ModalAuthLayout />
         </div>
-      </AuthProvider>
+      </AuthModalProvider>
     </ToastProvider>
   );
 }
