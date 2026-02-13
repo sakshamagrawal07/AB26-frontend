@@ -12,16 +12,20 @@ const Sponsors = () => {
 
   const tierThree = [
     { name: "Sponsor 4", logo: null },
+    { name: "Sponsor 4", logo: null },
+    { name: "Sponsor 4", logo: null },
+    { name: "Sponsor 4", logo: null },
+    { name: "Sponsor 4", logo: null },
     { name: "Sponsor 5", logo: null },
   ];
 
   return (
     <main className="sponsorsPage bg-black">
       <HeroSection />
-      {/* <SponsorsTierSection title="TITLE SPONSER" sponsors={tierOne} />
+      <SponsorsTierSection title="TITLE SPONSER" sponsors={tierOne} />
       <SponsorsTierSection title="PLATINUM SPONSORS" sponsors={tierTwo} />
-      <SponsorsTierSection title="GOLD SPONSORS" sponsors={tierThree} /> */}
-      <ComingSoon />
+      <SponsorsTierSection title="GOLD SPONSORS" sponsors={tierThree} />
+      {/* <ComingSoon /> */}
     </main>
   );
 };

@@ -8,12 +8,12 @@ import NotFound from "./components/not-found/NotFound";
 import { AuthProvider } from "./contexts/AuthContext";
 import { ToastProvider } from "./contexts/ToastContext";
 import About from "./pages/About";
-import Developers from "./pages/Developers";
 import Explore from "./pages/Explore";
 import Home from "./pages/Home";
 import PassesStay from "./pages/PassesStay";
 import Sponsors from "./pages/Sponsors";
 import Teams from "./pages/Teams";
+import DevelopersPage from "./pages/Developers";
 
 function App() {
 
@@ -75,7 +75,7 @@ function App() {
             <Route path="*" element={<NotFound />} />
             <Route path="/sponsors" element={<Sponsors />} />
             <Route path="/teams" element={<Teams />} />
-            <Route path="/developers" element={<Developers />} />
+            <Route path="/developers" element={<DevelopersPage />} />
             <Route path="/explore" element={<Explore />} />
             <Route path="/about" element={<About />} />
             <Route path="/passes" element={<PassesStay />} />
