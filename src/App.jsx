@@ -15,6 +15,7 @@ import PassesStay from "./pages/PassesStay";
 import Sponsors from "./pages/Sponsors";
 import Teams from "./pages/Teams";
 import Developers from "./pages/Developers";
+import TestPay from "./pages/TestPay";
 
 function App() {
   // useEffect(() => {
@@ -81,6 +82,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/passes" element={<PassesStay />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/testpay" element={<TestPay />} />
           </Routes>
 
           <Footer />

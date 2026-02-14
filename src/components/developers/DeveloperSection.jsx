@@ -72,6 +72,17 @@ const DeveloperSection = () => {
     },
 
     {
+      name: "Satvik Rastogi",
+      designation: "Member",
+      image:
+        "https://assets.2026.abhivyaktifest.in/images/developers/satvik.jpeg",
+      github: "https://github.com/Satvik-art-creator",
+      insta: "https://www.instagram.com/satvik.verse/",
+      linkedin: "https://www.linkedin.com/in/satvikrastogi077/",
+      twitter: "",
+    },
+
+    {
       name: "Ojaswi Joshi",
       designation: "Member",
       image:
@@ -123,17 +134,6 @@ const DeveloperSection = () => {
       insta: "https://www.instagram.com/lil_arnz/",
       linkedin: "https://www.linkedin.com/in/arnav-timble",
       twitter: "https://x.com/Arrnnzz",
-    },
-
-    {
-      name: "Satvik Rastogi",
-      designation: "Member",
-      image:
-        "https://assets.2026.abhivyaktifest.in/images/developers/satvik.jpeg",
-      github: "https://github.com/Satvik-art-creator",
-      insta: "https://www.instagram.com/satvik.verse/",
-      linkedin: "https://www.linkedin.com/in/satvikrastogi077/",
-      twitter: "",
     },
 
     {

@@ -554,6 +554,7 @@
     z-index: 10000;
     -webkit-overflow-scrolling: touch;
     overscroll-behavior: contain;
+    align-items: flex-start;
   }
 
   .modal {
@@ -563,15 +564,15 @@
     min-height: unset;
     max-height: none; /* No internal limit */
     width: 100%;
-    max-width: 600px;
-    margin: 2rem auto;
-    padding: 1.5rem;
+    max-width: 100%;
+    margin: 1rem auto;
+    padding: 1.5rem 1rem;
     padding-bottom: 6rem; /* Huge padding for safe area */
     gap: 2rem;
-
     overflow: visible; /* No internal scroll */
     position: relative;
     box-sizing: border-box;
+    border-radius: 16px;
   }
 
   .leftColumn,
@@ -586,82 +587,210 @@
     padding-top: 2rem;
   }
 
-  /* Prize Box - Make it pop */
+  /* Prize Box - Keep horizontal layout on mobile */
   .prizeBox {
-    background: rgba(255, 215, 0, 0.05); /* Subtle gold tint */
+    background: rgba(255, 215, 0, 0.05);
     border: 1px solid rgba(255, 215, 0, 0.2);
-    flex-direction: column;
+    flex-direction: row;
     gap: 1.5rem;
+    padding: 1.25rem;
+    align-items: center;
+    justify-content: space-between;
   }
 
   .eventImage {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 16/9; /* Standard video ratio */
-    object-fit: cover;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    display: none;
   }
 
   .header {
     padding-left: 0;
-    margin-bottom: 1.5rem;
-    padding-right: 6rem; /* Further increased to safely clear close button */
+    margin-bottom: 1rem;
+    padding-right: 3rem; /* Safely clear close button */
     text-align: left;
+    margin-top: 2rem;
   }
 
   .header h1 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
+    word-break: break-word;
+  }
+
+  .subHeader {
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .organizerInfo {
+    font-size: 0.75rem;
+  }
+
+  .unstopLink {
+    font-size: 0.65rem;
+    gap: 0.2rem;
+  }
+
+  .unstopIcon {
+    display: none;
+    width: 20px;
+    height: 20px;
+    font-size: 10px;
   }
 
   .closeButton {
     top: 1rem;
     right: 1rem;
-    background: rgba(0, 0, 0, 0.2);
+    width: 36px;
+    height: 36px;
+    font-size: 1.5rem;
+    background: rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(4px);
+    border-radius: 8px;
   }
 
   /* Tabs scrollable */
   .tabs {
     overflow-x: auto;
+    overflow-y: hidden;
     white-space: nowrap;
-    padding-bottom: 8px;
+    padding-bottom: 0.5rem;
     margin-bottom: 1rem;
+    gap: 1.5rem;
+    scrollbar-width: none;
   }
 
-  /* .tabContent {
-    overflow: visible;
-  } */
+  .tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .tabButton {
+    font-size: 0.9rem;
+    padding: 0.4rem 0;
+    padding-bottom: 0.5rem;
+  }
+
+  .tabContent {
+    max-height: none;
+    min-height: auto;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    flex: 1;
+  }
+
+  .paragraph {
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .stageTitle {
+    font-size: 1.1rem;
+  }
+
+  .stageCard {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .ruleItem {
+    font-size: 0.95rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .contactName {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .contactLink {
+    font-size: 0.9rem;
+    gap: 0.75rem;
+  }
 
   .actions {
-    margin-top: 1.5rem;
+    margin-top: 1rem;
+    gap: 1rem;
+  }
+
+  .actionButton {
+    padding: 0.7rem 1.5rem;
+    font-size: 0.95rem;
   }
 
   /* Fix Prize Box Layout for Mobile */
   .prizeMain {
     flex-direction: row;
-    justify-content: center;
-    gap: 1.5rem;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.8rem;
+    border-radius: 8px;
+    flex-shrink: 0;
   }
 
   .trophyIconLarge {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-bottom: 0;
     color: #ffd700;
+    flex-shrink: 0;
+  }
+
+  .prizeTotal {
+    text-align: left;
+  }
+
+  .prizeLabel {
+    font-size: 0.7rem;
+  }
+
+  .prizeValueMain {
+    font-size: 1.3rem;
   }
 
   .separator {
-    width: 100%;
-    height: 1px;
+    width: 1px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.2);
+    margin: 0;
+    flex-shrink: 0;
   }
 
   .prizeBreakdown {
-    text-align: center;
-    font-size: 0.95rem;
+    text-align: left;
+    font-size: 0.8rem;
+    gap: 0.5rem;
+    display: flex;
+    flex: 1;
   }
 
   .breakdownItem {
     justify-content: center;
-    gap: 2rem;
+    gap: 0.4rem;
+    font-size: 0.8rem;
+    flex: 1;
+  }
+
+  /* Mobile Timeline improvements */
+  .timelineContainer {
+    padding-left: 0.75rem;
+  }
+
+  .timelineContainer::before {
+    left: 0;
+  }
+
+  .stageCard {
+    margin-left: 1rem;
+  }
+
+  .stageCard::before {
+    left: -1rem;
+    width: 10px;
+    height: 10px;
+  }
+
+  .stageDate {
+    font-size: 0.8rem;
+    padding: 0.15rem 0.5rem;
   }
 }

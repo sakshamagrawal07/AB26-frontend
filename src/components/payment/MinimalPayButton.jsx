@@ -30,6 +30,8 @@ const MinimalPayButton = ({
   amount = 500,
   eventId = null,
   teamId = null,
+  passTypeId = null,
+  accommodationTypeId = null,
   contact = null,
   title = "AB26 Payment",
   description = "Event Registration",
@@ -64,6 +66,8 @@ const MinimalPayButton = ({
         amount,
         eventId,
         teamId,
+        passTypeId,
+        accommodationTypeId,
       });
 
       // initialize razorpay

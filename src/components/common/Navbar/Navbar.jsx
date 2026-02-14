@@ -339,7 +339,7 @@ const Navbar = () => {
             >
               <button
                 onClick={closeMobileMenu}
-                className="absolute cursor-pointer top-6 right-6 text-white hover:text-gray-300 transition-colors p-2 z-70"
+                className="absolute cursor-pointer top-4 left-6 text-white hover:text-gray-300 transition-colors p-2 z-70"
               >
                 <svg
                   className="w-8 h-8"

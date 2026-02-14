@@ -5,6 +5,8 @@ export const createPaymentOrder = async ({
   amount,
   eventId,
   teamId,
+  passTypeId,
+  accommodationTypeId,
 }) => {
   try {
     const response = await fetch(`${BACKEND_URL}/api/payment/create-order`, {
@@ -17,6 +19,8 @@ export const createPaymentOrder = async ({
         amount,
         eventId,
         teamId,
+        passTypeId,
+        accommodationTypeId,
       }),
     });
 
@@ -86,6 +90,7 @@ export const checkPaymentStatus = async (orderId, userId) => {
 export const initializeRazorpay = (
   orderData,
   userDetails,
+  purchaseType,
   onSuccess,
   onError,
 ) => {
@@ -93,13 +98,20 @@ export const initializeRazorpay = (
     const script = document.createElement("script");
     script.src = "https://checkout.razorpay.com/v1/checkout.js";
     script.onload = () => {
+      let description = "Event Registration Payment";
+      if (purchaseType === "pass") {
+        description = "Pass Purchase";
+      } else if (purchaseType === "accommodation") {
+        description = "Accommodation Booking";
+      }
+
       const options = {
         key: orderData.key,
         amount: orderData.amount,
         currency: orderData.currency,
         order_id: orderData.orderId,
         name: "AB26 Event",
-        description: "Event Registration Payment",
+        description: description,
         handler: function (response) {
           if (onSuccess) {
             onSuccess(response);

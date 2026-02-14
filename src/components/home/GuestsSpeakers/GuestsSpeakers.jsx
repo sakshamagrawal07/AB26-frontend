@@ -16,27 +16,31 @@ const GuestsSpeakers = () => {
   const speakers = [
     {
       id: 1,
-      name: "UNKNOWN GUEST",
-      designation: "UNKNOWN",
-      image: "https://assets.2026.abhivyaktifest.in/images/guests/unknown-guest-card.svg",
+      name: "",
+      designation: "",
+      image:
+        "https://assets.2026.abhivyaktifest.in/images/guests/unknown-guest-card-v2.svg",
     },
     {
       id: 2,
-      name: "UNKNOWN GUEST",
-      designation: "UNKNOWN",
-      image: "https://assets.2026.abhivyaktifest.in/images/guests/unknown-guest-card.svg",
+      name: "",
+      designation: "",
+      image:
+        "https://assets.2026.abhivyaktifest.in/images/guests/unknown-guest-card-v2.svg",
     },
     {
       id: 3,
-      name: "UNKNOWN GUEST",
-      designation: "UNKNOWN",
-      image: "https://assets.2026.abhivyaktifest.in/images/guests/unknown-guest-card.svg",
+      name: "",
+      designation: "",
+      image:
+        "https://assets.2026.abhivyaktifest.in/images/guests/unknown-guest-card-v2.svg",
     },
     {
       id: 4,
-      name: "UNKNOWN GUEST",
-      designation: "UNKNOWN",
-      image: "https://assets.2026.abhivyaktifest.in/images/guests/unknown-guest-card.svg",
+      name: "",
+      designation: "",
+      image:
+        "https://assets.2026.abhivyaktifest.in/images/guests/unknown-guest-card-v2.svg",
     },
   ];
 

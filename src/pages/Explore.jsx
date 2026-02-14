@@ -10,7 +10,7 @@ import Competitions from "../components/explore/competitions/Competitions";
 const VALID_TABS = ["proShows", "competitions", "streetActivity"];
 
 const Explore = () => {
-  const [activeTab, setActiveTab] = useState("proShows");
+  const [activeTab, setActiveTab] = useState("competitions");
   const tabsRef = useRef(null);
 
   // Initialize from URL hash on mount and scroll to top
@@ -20,7 +20,7 @@ const Explore = () => {
       setActiveTab(hashTab);
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
-  }, [])
+  }, []);
 
   // Update URL hash when tab changes
   const handleTabChange = (tabKey) => {
