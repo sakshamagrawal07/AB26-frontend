@@ -15,6 +15,10 @@ import PassesStay from "./pages/PassesStay";
 import Sponsors from "./pages/Sponsors";
 import Teams from "./pages/Teams";
 import Developers from "./pages/Developers";
+import TermsAndConditions from "./pages/TermsAndConditions";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import ShippingPolicy from "./pages/ShippingPolicy";
+import CancellationAndRefunds from "./pages/CancellationAndRefunds";
 
 function App() {
   // useEffect(() => {
@@ -81,6 +85,10 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/passes" element={<PassesStay />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/terms" element={<TermsAndConditions />} />
+            <Route path="/privacy" element={<PrivacyPolicy />} />
+            <Route path="/shipping" element={<ShippingPolicy />} />
+            <Route path="/cancellation" element={<CancellationAndRefunds />} />
           </Routes>
 
           <Footer />

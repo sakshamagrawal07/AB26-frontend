@@ -18,25 +18,25 @@ const GuestsSpeakers = () => {
       id: 1,
       name: "UNKNOWN GUEST",
       designation: "UNKNOWN",
-      image: "https://assets.2026.abhivyaktifest.in/images/guests/unknown-guest-card.svg",
+      image: "https://assets.2026.abhivyaktifest.in/images/guests/unknown-guest-card-v2.svg",
     },
     {
       id: 2,
       name: "UNKNOWN GUEST",
       designation: "UNKNOWN",
-      image: "https://assets.2026.abhivyaktifest.in/images/guests/unknown-guest-card.svg",
+      image: "https://assets.2026.abhivyaktifest.in/images/guests/unknown-guest-card-v2.svg",
     },
     {
       id: 3,
       name: "UNKNOWN GUEST",
       designation: "UNKNOWN",
-      image: "https://assets.2026.abhivyaktifest.in/images/guests/unknown-guest-card.svg",
+      image: "https://assets.2026.abhivyaktifest.in/images/guests/unknown-guest-card-v2.svg",
     },
     {
       id: 4,
       name: "UNKNOWN GUEST",
       designation: "UNKNOWN",
-      image: "https://assets.2026.abhivyaktifest.in/images/guests/unknown-guest-card.svg",
+      image: "https://assets.2026.abhivyaktifest.in/images/guests/unknown-guest-card-v2.svg",
     },
   ];
 
@@ -201,10 +201,10 @@ const GuestsSpeakers = () => {
                         <img src={speaker.image} alt={speaker.name} />
                       </div> */}
 
-                      <div className="designation-text">
+                      {/* <div className="designation-text">
                         {speaker.designation}
-                      </div>
-                      <div className="guest-name-text">{speaker.name}</div>
+                      </div> */}
+                      {/* <div className="guest-name-text">{speaker.name}</div> */}
                     </div>
                   </div>
                 </div>
