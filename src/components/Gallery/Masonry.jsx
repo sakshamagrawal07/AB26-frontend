@@ -66,6 +66,15 @@ const Masonry = ({
 
   const [containerRef, { width }] = useMeasure();
   const [imagesReady, setImagesReady] = useState(false);
+  const [showSkeletons, setShowSkeletons] = useState(true);
+
+  useEffect(() => {
+    if (imagesReady) {
+      const maxAnimTime = (duration + (items.length || 0) * stagger) * 1000 + 500;
+      const timer = setTimeout(() => setShowSkeletons(false), maxAnimTime);
+      return () => clearTimeout(timer);
+    }
+  }, [imagesReady, items.length, stagger, duration]);
 
   const getInitialPosition = item => {
     const containerRect = containerRef.current?.getBoundingClientRect();
@@ -214,11 +223,27 @@ const Masonry = ({
 
   return (
     <div ref={containerRef} className="relative w-full" style={{ height: height }}>
+      {/* Skeletons */}
+      {showSkeletons &&
+        grid.map(item => (
+          <div
+            key={`skeleton-${item.id}`}
+            className={`absolute rounded-[10px] pointer-events-none bg-white/10 z-0 ${
+              !imagesReady ? 'animate-pulse' : ''
+            }`}
+            style={{
+              transform: `translate(${item.x}px, ${item.y}px)`,
+              width: item.w,
+              height: item.h
+            }}
+          />
+        ))}
+
       {grid.map(item => (
         <div
           key={item.id}
           data-key={item.id}
-          className="absolute box-content"
+          className="absolute box-content opacity-0 z-10"
           style={{ willChange: 'transform, width, height, opacity' }}
           onMouseEnter={e => handleMouseEnter(item.id, e.currentTarget)}
           onMouseLeave={e => handleMouseLeave(item.id, e.currentTarget)}
